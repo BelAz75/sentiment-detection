@@ -13,7 +13,6 @@ class SentimentPredictor:
         try:
             result = self._model.predict([text], k=2)
             if len(result) > 0:
-                result[0].pop('skip')
                 return result[0]
             else:
                 return self.error_result
