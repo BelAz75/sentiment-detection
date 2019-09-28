@@ -13,3 +13,7 @@ def get_sentiment():
         return sentiment
     else:
         return 'Request doesn\'t contain json with field "text"', 400
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
